@@ -42,17 +42,17 @@ const NormalView: React.FC = () => {
 
   return (
     <div>
-      <h1>Normal UI View</h1>
+      <h1>📕 Normal UI View </h1>
       {profile ? (
         <div>
           <p>Name: {profile.name}</p>
           <p>Age: {profile.age}</p>
-          <p>Nationality: {profile.nationality}</p>
+          <p>Nationality: {profile.nationality} 🇫🇷</p>
           <p>City: {profile.city}</p>
           <p>Current Company: {profile.currentCompany}</p>
           <p>University Level: {profile.uniLevel}</p>
 
-          <h2>Skills</h2>
+          <h2>Skills 🤖</h2>
           <ul>
             {profile.skills.map((skill, index) => (
               <li key={index}>
@@ -61,7 +61,7 @@ const NormalView: React.FC = () => {
             ))}
           </ul>
 
-          <h2>Experiences</h2>
+          <h2>Experiences 🏗️</h2>
           <ul>
             {profile.experiences.map((experience, index) => (
               <li key={index}>
@@ -72,7 +72,7 @@ const NormalView: React.FC = () => {
           </ul>
           <ul>
           </ul>
-          <h2>Languages</h2>
+          <h2>Languages 🗣️</h2>
           <ul>
             {profile.languages.map((language, index) => (
               <li key={index}>
@@ -80,7 +80,7 @@ const NormalView: React.FC = () => {
               </li>
             ))}
           </ul>
-          <h2> Detailed Experiences</h2>
+          <h2> Detailed Experiences 📚</h2>
           {<ul>
             {experiences?.map((e, index) => (
               <>
