@@ -1,5 +1,6 @@
 import React from 'react';
 import Menu from './Menu';
+import 'swagger-ui-react/swagger-ui.css'; 
 
 interface AppProps {
   // Define your OpenAPI spec type here
@@ -9,7 +10,6 @@ interface AppProps {
 const App: React.FC<AppProps> = () => {
   return (
     <div>
-      <h1>My App</h1>
       <Menu/>
     </div>
   );
