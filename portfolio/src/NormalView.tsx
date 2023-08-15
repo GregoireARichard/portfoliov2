@@ -5,13 +5,16 @@ import { IProfile } from "./types/IProfile";
 import { IExperience } from "./types/IExperience";
 import "./css/normalView.css";
 
+const url = process.env.REACT_APP_API_URL
+
 const NormalView: React.FC = () => {
   const [profile, setProfile] = useState<IProfile | null>(null);
   const [experiences, setExperiences] = useState<IExperience[] | null>(null);
 
   const fetchProfile = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/profile");
+      const response = await axios.get(`${url}/profile`);
+      console.log(process.env.BACK_URL)
       setProfile(response.data);
     } catch (error) {
       console.error("Error fetching profile:", error);
@@ -21,7 +24,7 @@ const NormalView: React.FC = () => {
     try {
       const lang = "FR";
       const response = await axios.get<IExperience[]>(
-        "http://localhost:8000/experience",
+        `${url}/experience`,
         {
           params: { lang },
         }
@@ -67,7 +70,8 @@ const NormalView: React.FC = () => {
               </li>
             ))}
           </ul>
-
+          <ul>
+          </ul>
           <h2>Languages</h2>
           <ul>
             {profile.languages.map((language, index) => (

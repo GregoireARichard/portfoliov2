@@ -28,6 +28,7 @@ const Menu: React.FC = () => {
       <h1>Hello 👋 I'm Grégoire, a Paris-based Back-end Engineer</h1>
       <p>As you might've noticed, I'm really not much of a front-end dev 😳 </p>
       <p>You may use either the UI version or the API version (with Postman or any other HTTP Request engine) to learn about me </p>
+      <p>You may call {process.env.REACT_APP_API_URL} if you're using the swagger API view</p>
       {view === "swagger" && <SwaggerUI url="http://localhost:8000/openapi" />}
       {view === "normal" && <NormalView />}
     </div>
