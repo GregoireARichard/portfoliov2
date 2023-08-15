@@ -22,7 +22,7 @@ const NormalView: React.FC = () => {
   };
   const fetchExperiences = async () => {
     try {
-      const lang = "FR";
+      const lang = "EN";
       const response = await axios.get<IExperience[]>(
         `${url}/experience`,
         {
