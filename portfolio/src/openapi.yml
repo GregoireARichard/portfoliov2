@@ -1,0 +1,36 @@
+openapi: 3.0.0
+info:
+  title: Profile API
+  version: 1.0.0
+paths:
+  /profile:
+    get:
+      summary: Get profile information
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              example:
+                name: John Doe
+                age: 30
+                nationality: USA
+                city: New York
+                currentCompany: Example Corp
+                uniLevel: Master's degree
+                skills:
+                  - language: JavaScript
+                    experience: more than 5 years
+                    level: high
+                languages:
+                  - lang: English
+                    level: fluent
+                experiences:
+                  - type: internship
+                    jobTitle: Software Developer Intern
+                    company: Example Inc
+                    companyLinkedIn: https://www.linkedin.com/company/example/
+                    length: 6 months
+                    stack:
+                      - React
+                      - Node.js
