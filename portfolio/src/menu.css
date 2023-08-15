@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    display: flex;
   }
   
   .menu-button {

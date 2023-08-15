@@ -25,7 +25,7 @@ const Menu: React.FC = () => {
       >
         View Normal UI
       </button>
-
+      <p>As you might've noticed, I'm really not much of a front-end dev 😳 </p>
       {view === "swagger" && <SwaggerUI url="http://localhost:8000/openapi" />}
       {view === "normal" && <NormalView />}
     </div>
