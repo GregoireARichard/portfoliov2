@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import NormalView from "./NormalView";
 import SwaggerUI from "swagger-ui-react";
 import "./css/menu.css";
+import Footer from "./footer";
 
 const urlOpenApi = `${process.env.REACT_APP_API_URL}/openapi`;
 const Menu: React.FC = () => {
@@ -35,6 +36,7 @@ const Menu: React.FC = () => {
       </p>
       {view === "swagger" && <SwaggerUI url={urlOpenApi} />}
       {view === "normal" && <NormalView />}
+      <Footer /> {/* Include the Footer component */}
     </div>
   );
 };
