@@ -2,4 +2,6 @@
   from = "/*"
   to = "/index.html"
   status = 200
-   environment = { REACT_APP_API_URL = "https://api-gar.onrender.com"}
+
+[build]
+  environment = { REACT_APP_API_URL = "https://api-gar.onrender.com"}
